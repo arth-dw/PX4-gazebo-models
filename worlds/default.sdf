@@ -15,6 +15,7 @@
       <background>0.7 0.7 0.7 1</background>
       <shadows>true</shadows>
     </scene>
+
     <model name="ground_plane">
       <static>true</static>
       <link name="link">
@@ -68,38 +69,33 @@
     <model name="turtlebot3_world_model">
       <static>true</static>
       <link name="link">
-        <!-- Cylinder Pillars (original radius 0.15, length 0.5) -> (radius 0.6, length 2.0) -->
-        <!-- Cylinder Poses (original 1.1) -> 4.4 -->
+        <visual name="one_one"><pose>-4.4 -4.4 1.0 0 0 0</pose><geometry><box><size>1.2 1.2 2.0</size></box></geometry><material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+        <collision name="one_one"><pose>-4.4 -4.4 1.0 0 0 0</pose><geometry><box><size>1.2 1.2 2.0</size></box></geometry></collision>
         
-        <visual name="one_one"><pose>-4.4 -4.4 1.0 0 0 0</pose><geometry><cylinder><radius>0.6</radius><length>2.0</length></cylinder></geometry></visual>
-        <collision name="one_one"><pose>-4.4 -4.4 1.0 0 0 0</pose><geometry><cylinder><radius>0.6</radius><length>2.0</length></cylinder></geometry></collision>
+        <visual name="one_two"><pose>-4.4 0 1.0 0 0 0</pose><geometry><box><size>1.2 1.2 2.0</size></box></geometry><material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+        <collision name="one_two"><pose>-4.4 0 1.0 0 0 0</pose><geometry><box><size>1.2 1.2 2.0</size></box></geometry></collision>
         
-        <visual name="one_two"><pose>-4.4 0 1.0 0 0 0</pose><geometry><cylinder><radius>0.6</radius><length>2.0</length></cylinder></geometry></visual>
-        <collision name="one_two"><pose>-4.4 0 1.0 0 0 0</pose><geometry><cylinder><radius>0.6</radius><length>2.0</length></cylinder></geometry></collision>
+        <visual name="one_three"><pose>-4.4 4.4 1.0 0 0 0</pose><geometry><box><size>1.2 1.2 2.0</size></box></geometry><material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+        <collision name="one_three"><pose>-4.4 4.4 1.0 0 0 0</pose><geometry><box><size>1.2 1.2 2.0</size></box></geometry></collision>
         
-        <visual name="one_three"><pose>-4.4 4.4 1.0 0 0 0</pose><geometry><cylinder><radius>0.6</radius><length>2.0</length></cylinder></geometry></visual>
-        <collision name="one_three"><pose>-4.4 4.4 1.0 0 0 0</pose><geometry><cylinder><radius>0.6</radius><length>2.0</length></cylinder></geometry></collision>
+        <visual name="two_one"><pose>0 -4.4 1.0 0 0 0</pose><geometry><box><size>1.2 1.2 2.0</size></box></geometry><material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+        <collision name="two_one"><pose>0 -4.4 1.0 0 0 0</pose><geometry><box><size>1.2 1.2 2.0</size></box></geometry></collision>
         
-        <visual name="two_one"><pose>0 -4.4 1.0 0 0 0</pose><geometry><cylinder><radius>0.6</radius><length>2.0</length></cylinder></geometry></visual>
-        <collision name="two_one"><pose>0 -4.4 1.0 0 0 0</pose><geometry><cylinder><radius>0.6</radius><length>2.0</length></cylinder></geometry></collision>
+        <visual name="two_two"><pose>0 0 1.0 0 0 0</pose><geometry><box><size>1.2 1.2 2.0</size></box></geometry><material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+        <collision name="two_two"><pose>0 0 1.0 0 0 0</pose><geometry><box><size>1.2 1.2 2.0</size></box></geometry></collision>
         
-        <visual name="two_two"><pose>0 0 1.0 0 0 0</pose><geometry><cylinder><radius>0.6</radius><length>2.0</length></cylinder></geometry></visual>
-        <collision name="two_two"><pose>0 0 1.0 0 0 0</pose><geometry><cylinder><radius>0.6</radius><length>2.0</length></cylinder></geometry></collision>
+        <visual name="two_three"><pose>0 4.4 1.0 0 0 0</pose><geometry><box><size>1.2 1.2 2.0</size></box></geometry><material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+        <collision name="two_three"><pose>0 4.4 1.0 0 0 0</pose><geometry><box><size>1.2 1.2 2.0</size></box></geometry></collision>
         
-        <visual name="two_three"><pose>0 4.4 1.0 0 0 0</pose><geometry><cylinder><radius>0.6</radius><length>2.0</length></cylinder></geometry></visual>
-        <collision name="two_three"><pose>0 4.4 1.0 0 0 0</pose><geometry><cylinder><radius>0.6</radius><length>2.0</length></cylinder></geometry></collision>
+        <visual name="three_one"><pose>4.4 -4.4 1.0 0 0 0</pose><geometry><box><size>1.2 1.2 2.0</size></box></geometry><material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+        <collision name="three_one"><pose>4.4 -4.4 1.0 0 0 0</pose><geometry><box><size>1.2 1.2 2.0</size></box></geometry></collision>
         
-        <visual name="three_one"><pose>4.4 -4.4 1.0 0 0 0</pose><geometry><cylinder><radius>0.6</radius><length>2.0</length></cylinder></geometry></visual>
-        <collision name="three_one"><pose>4.4 -4.4 1.0 0 0 0</pose><geometry><cylinder><radius>0.6</radius><length>2.0</length></cylinder></geometry></collision>
+        <visual name="three_two"><pose>4.4 0 1.0 0 0 0</pose><geometry><box><size>1.2 1.2 2.0</size></box></geometry><material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+        <collision name="three_two"><pose>4.4 0 1.0 0 0 0</pose><geometry><box><size>1.2 1.2 2.0</size></box></geometry></collision>
         
-        <visual name="three_two"><pose>4.4 0 1.0 0 0 0</pose><geometry><cylinder><radius>0.6</radius><length>2.0</length></cylinder></geometry></visual>
-        <collision name="three_two"><pose>4.4 0 1.0 0 0 0</pose><geometry><cylinder><radius>0.6</radius><length>2.0</length></cylinder></geometry></collision>
-        
-        <visual name="three_three"><pose>4.4 4.4 1.0 0 0 0</pose><geometry><cylinder><radius>0.6</radius><length>2.0</length></cylinder></geometry></visual>
-        <collision name="three_three"><pose>4.4 4.4 1.0 0 0 0</pose><geometry><cylinder><radius>0.6</radius><length>2.0</length></cylinder></geometry></collision>
+        <visual name="three_three"><pose>4.4 4.4 1.0 0 0 0</pose><geometry><box><size>1.2 1.2 2.0</size></box></geometry><material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material></visual>
+        <collision name="three_three"><pose>4.4 4.4 1.0 0 0 0</pose><geometry><box><size>1.2 1.2 2.0</size></box></geometry></collision>
 
-        <!-- Hexagons (Original scales 0.8, 0.55 -> *4 = 3.2, 2.2) -->
-        <!-- Poses also scaled by 4 -->
         <visual name="head"><pose>14.0 0 -2.0 0 0 0</pose><geometry><mesh><uri>model://turtlebot3_world/meshes/hexagon.dae</uri><scale>3.2 3.2 3.2</scale></mesh></geometry></visual>
         <collision name="head"><pose>14.0 0 -2.0 0 0 0</pose><geometry><mesh><uri>model://turtlebot3_world/meshes/hexagon.dae</uri><scale>3.2 3.2 3.2</scale></mesh></geometry></collision>
 
@@ -115,7 +111,6 @@
         <visual name="right_foot"><pose>-7.2 -10.8 0 0 0 0</pose><geometry><mesh><uri>model://turtlebot3_world/meshes/hexagon.dae</uri><scale>2.2 2.2 2.2</scale></mesh></geometry></visual>
         <collision name="right_foot"><pose>-7.2 -10.8 0 0 0 0</pose><geometry><mesh><uri>model://turtlebot3_world/meshes/hexagon.dae</uri><scale>2.2 2.2 2.2</scale></mesh></geometry></collision>
 
-        <!-- Wall (Original scale 0.25 -> *4 = 1.0) -->
         <visual name="body"><pose>0 0 -1.2 0 0 -1.5708</pose><geometry><mesh><uri>model://turtlebot3_world/meshes/wall.dae</uri><scale>1.0 1.0 1.0</scale></mesh></geometry></visual>
         <collision name="body"><pose>0 0 -1.2 0 0 -1.5708</pose><geometry><mesh><uri>model://turtlebot3_world/meshes/wall.dae</uri><scale>1.0 1.0 1.0</scale></mesh></geometry></collision>
       </link>
@@ -140,11 +135,12 @@
         <falloff>0</falloff>
       </spot>
     </light>
+
     <spherical_coordinates>
       <surface_model>EARTH_WGS84</surface_model>
       <world_frame_orientation>ENU</world_frame_orientation>
       <latitude_deg>47.397971057728974</latitude_deg>
-      <longitude_deg> 8.546163739800146</longitude_deg>
+      <longitude_deg>8.546163739800146</longitude_deg>
       <elevation>0</elevation>
     </spherical_coordinates>
   </world>
